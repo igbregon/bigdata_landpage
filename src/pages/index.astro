@@ -1,5 +1,5 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import "../styles/global.css";
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,5 +7,77 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<main>
+		<h1 class="text-center text-7xl font-bold mx-10">Informe Evaluación 2</h1>
+		<p class="pt-10">En este informe se detalla el paso a paso de la transformación y preparación de datos del archivo "ufo_sighting.csv" para su posterior extracción de datos para la creación de gráficos según el análisis a realizar.
+
+		Dentro de este archivo se encuentran las variables:
+		<br>- Date_time
+		<br>- city
+		<br>- state/province
+		<br>- country
+		<br>- UFO_shape
+		<br>- length_of_encounters_seconds
+		<br>- described_duration_of_encounter
+		<br>- description
+		<br>- date_documented
+		<br>- latitude
+		<br>- longitude
+		</p>
+		<div>
+			<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
+		</div>
+		<div class="flex flex-col gap-6">
+			<p>Visualización de la creación del bucket dónde se carga el archivo "ufo_sighting.csv" el cual contiene la tabla de datos a analizar</p>
+			<img src="Bucket.png" alt="">
+			<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
+		</div>
+		<div class="flex content-center gap-6">
+			<div>
+				<p>Garantización de acceso para la herramienta DATAPREP utilizada para visualizar los datos a tratar</p>
+			</div>
+			<div>
+				<img src="DATAPREP.png" alt="">
+			</div>
+			<div>
+				<img src="DATAPREP2.png" alt="">
+			</div>
+		</div>
+		<div>
+			<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
+		</div>
+		<div class="flex flex-col gap-6">
+			<p>Visualización raw a partir de la tabla titulada "avistamientos" la cual fue generada a partir del archivo .csv, divido en columnas con sus respectivos valores</p>
+			<img src="TABLAS_SIN_LIMPIAR.png" alt="">
+			<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
+		</div>
+		<div class="grid gap-6 md:grid-cols-2">
+			<div class="flex flex-col mx-auto col-start-1">
+				<p>Reemplazo de valores nulos con la moda en la columna "UFO_shape"</p>
+				<img src="REMPLAZO_MODA_UFO.png" alt="">
+			</div>
+			<div class="content-center">
+				<p>Paso a paso del tratamiento de valores nulos con reemplazo o eliminación dependiendo de la necesidad</p>
+				<img src="RECIPE.png" alt="">
+			</div>
+		</div>
+		<div>
+			<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
+		</div>
+		<div class="flex flex-col gap-6">
+			<p>Visualización gráfica de la query en la columna "UFO_shape" ordenada de manera descendente por cantidad de avistamientos</p>
+			<img src="QUERY1_GRAFICO.png" alt="">
+			<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
+		</div>
+		<div class="flex flex-col gap-6">
+			<p>Visualización gráfica de la segunda query de la columna "" ordenada de manera descendente por cantidad de avistamientos por año</p>
+			<img src="QUERY2.png" alt="">
+			<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
+		</div>
+		<div class="flex flex-col gap-6">
+			<p>Visualización gráfica de la segunda query de la columna "" ordenada de manera descendente por cantidad de avistamientos por estado</p>
+			<img src="QUERY3.png" alt="">
+			<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
+		</div>
+	</main>
 </Layout>

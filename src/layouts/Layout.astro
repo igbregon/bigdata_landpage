@@ -1,22 +1,34 @@
+---
+import "../styles/global.css";
+---
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href="/src/styles.css" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>BIG DATA</title>
 	</head>
-	<body>
-		<slot />
+	<body class="flex  justify-center bg-black text-white p-20">
+		<div>
+			<slot />
+		</div>
 	</body>
 </html>
 
 <style>
-	html,
+	@reference "../styles/global.css"
+	
+	html{
+		font-family: system-ui, sans-serif; 
+		background: •#13151a;
+		color:•#fff;
+	},
 	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+		display: grid;
+		justify-content: center;
+		
 	}
 </style>
