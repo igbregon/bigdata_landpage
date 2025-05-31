@@ -8,6 +8,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: 'https://igbregon.github.io',
-  base: 'bigdata_landpage',
+  site: 'https://igbregon.github.io'
 });
